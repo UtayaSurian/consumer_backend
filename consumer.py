@@ -29,11 +29,7 @@ class RabbitMQConsumer:
         ch.basic_ack(delivery_tag=method.delivery_tag)  # send acknowledgement
         logging.info(" [+] Processed Successfully")
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 20bcf8f25fe0271e7ad76cf977c4749d082ac6f5
     def start_consuming(self):
         self.channel.basic_qos(
             prefetch_count=1
