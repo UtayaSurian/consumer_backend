@@ -4,3 +4,12 @@ db.sqlite3
 *.idea
 .idea/
 data.csv
+*.log
+db.sqlite3
+.env
+*.idea
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
