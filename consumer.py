@@ -36,7 +36,7 @@ class RabbitMQConsumer:
         )  # worker process a least one job to avoid round robin
 
         self.channel.basic_consume(
-            queue="basic_queue", on_message_callback=self.callback
+            queue=env_var.queue, on_message_callback=self.callback
         )
         logging.info(" [*] Waiting for messages. To exit press CTRL+C")
         self.channel.start_consuming()
