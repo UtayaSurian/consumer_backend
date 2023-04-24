@@ -1,0 +1,6 @@
+*.log
+db.sqlite3
+.env
+*.idea
+.idea/
+data.csv
