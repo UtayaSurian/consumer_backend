@@ -6,8 +6,12 @@ import json
 import env_var
 import utils
 import logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s',
-                    handlers=[logging.StreamHandler(), logging.FileHandler('system.log')])
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s:%(levelname)s:%(message)s",
+    handlers=[logging.StreamHandler(), logging.FileHandler("system.log")],
+)
 
 
 class RabbitMQConsumer:
@@ -24,8 +28,6 @@ class RabbitMQConsumer:
             time.sleep(2)
         ch.basic_ack(delivery_tag=method.delivery_tag)  # send acknowledgement
         logging.info(" [+] Processed Successfully")
-
-
 
     def start_consuming(self):
         self.channel.basic_qos(
